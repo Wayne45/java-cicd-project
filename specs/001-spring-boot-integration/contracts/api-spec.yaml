@@ -1,0 +1,80 @@
+openapi: 3.0.0
+info:
+  title: Hello World API
+  version: 1.0.0
+  description: A simple API for the Spring Boot Hello World application
+
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+
+paths:
+  /hello:
+    get:
+      summary: Get a hello message
+      description: Returns a configurable hello message
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: "Hello, World!"
+
+  /actuator/health:
+    get:
+      summary: Get application health
+      description: Returns the health status of the application
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: "UP"
+
+  /actuator/info:
+    get:
+      summary: Get application info
+      description: Returns information about the application
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  app:
+                    type: object
+                    properties:
+                      name:
+                        type: string
+                        example: "spring-boot-hello-world"
+                      description:
+                        type: string
+                        example: "Spring Boot Hello World Application"
+                      version:
+                        type: string
+                        example: "1.0.0"
+
+  /actuator/metrics:
+    get:
+      summary: Get application metrics
+      description: Returns various metrics of the application
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                # The actual schema will be more complex and depend on the specific metrics collected
