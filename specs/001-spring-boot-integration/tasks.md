@@ -38,11 +38,11 @@
 
 ### Implementation Tasks
 
-- [ ] T016 [US2] Create HelloController in src/main/java/com/example/controllers/HelloController.java
-- [ ] T017 [US2] Implement GET mapping for "/hello" endpoint in HelloController
-- [ ] T018 [P] [US2] Create unit test for HelloController in src/test/java/com/example/controllers/HelloControllerTest.java
-- [ ] T019 [US2] Implement integration test for "/hello" endpoint in src/test/java/com/example/integration/HelloEndpointTest.java
-- [ ] T020 [US2] Update README.md with information about the new endpoint and how to test it
+- [X] T016 [US2] Create HelloController in src/main/java/com/example/controllers/HelloController.java
+- [X] T017 [US2] Implement GET mapping for "/hello" endpoint in HelloController
+- [X] T018 [P] [US2] Create unit test for HelloController in src/test/java/com/example/controllers/HelloControllerTest.java
+- [X] T019 [US2] Implement integration test for "/hello" endpoint in src/test/java/com/example/integration/HelloEndpointTest.java
+- [X] T020 [US2] Update README.md with information about the new endpoint and how to test it
 
 ## Phase 5: User Story 3 - Developer Configures Application Properties
 
