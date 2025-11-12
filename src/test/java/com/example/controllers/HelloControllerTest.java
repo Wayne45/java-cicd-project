@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import com.example.config.AppProperties;
 
@@ -21,11 +22,12 @@ public class HelloControllerTest {
   @MockBean
   private AppProperties appProperties;
 
+  @WithMockUser
   @Test
   public void testHelloEndpoint() throws Exception {
-    when(appProperties.getMessage()).thenReturn("Hello, Test World!");
+    when(appProperties.getMessage()).thenReturn("Hello");
 
-    mockMvc.perform(get("/hello"))
+    mockMvc.perform(get("/hello").param("name", "Test World"))
         .andExpect(status().isOk())
         .andExpect(content().string("Hello, Test World!"));
   }
