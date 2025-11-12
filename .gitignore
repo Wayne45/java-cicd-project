@@ -23,6 +23,36 @@
 hs_err_pid*
 replay_pid*
 
-/.continue/
+# IDE-specific files
 /.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Spring Boot
+spring-boot-*.pid
+
+# Logs
+logs/
+
+# Application properties
+application-*.properties
+application-*.yml
+!application.properties
+!application.yml
+
+# Environment variables
+.env
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Project-specific directories
+/.continue/
 /.specify/
