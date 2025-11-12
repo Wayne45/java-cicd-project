@@ -31,6 +31,7 @@ The application will start on `http://localhost:8080`.
 
 - `src/main/java/com/example/Application.java`: Main application class
 - `src/main/java/com/example/config/AppConfig.java`: Application configuration
+- `src/main/java/com/example/config/AppProperties.java`: Custom properties configuration
 - `src/main/java/com/example/controllers/HelloController.java`: REST controller
 - `src/main/resources/application.properties`: Application properties
 - `src/main/resources/logback-spring.xml`: Logging configuration
@@ -50,7 +51,7 @@ The application will start on `http://localhost:8080`.
 ## REST Endpoints
 
 - Hello World: `GET http://localhost:8080/hello`
-    - Returns: "Hello, World!"
+    - Returns: Custom message from application properties
 
 To test the endpoint, you can use curl:
 ```
@@ -58,6 +59,16 @@ curl http://localhost:8080/hello
 ```
 
 Or simply open the URL in your web browser.
+
+## Customizing Application Properties
+
+The application uses a custom property `app.message` to configure the message returned by the `/hello` endpoint. You can customize this message by modifying the `application.properties` file:
+
+```properties
+app.message=Your custom message here
+```
+
+For testing purposes, you can override this property in the `application-test.properties` file.
 
 ## Testing
 

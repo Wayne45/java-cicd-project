@@ -52,12 +52,12 @@
 
 ### Implementation Tasks
 
-- [ ] T021 [US3] Add custom property "app.message" to src/main/resources/application.properties
-- [ ] T022 [US3] Create ConfigurationProperties class in src/main/java/com/example/config/AppProperties.java
-- [ ] T023 [US3] Modify HelloController to use the custom property
-- [ ] T024 [P] [US3] Update unit test for HelloController to verify custom property usage
-- [ ] T025 [US3] Implement integration test to verify property override in different environments
-- [ ] T026 [US3] Update README.md with instructions on how to customize application properties
+- [X] T021 [US3] Add custom property "app.message" to src/main/resources/application.properties
+- [X] T022 [US3] Create ConfigurationProperties class in src/main/java/com/example/config/AppProperties.java
+- [X] T023 [US3] Modify HelloController to use the custom property
+- [X] T024 [P] [US3] Update unit test for HelloController to verify custom property usage
+- [X] T025 [US3] Implement integration test to verify property override in different environments
+- [X] T026 [US3] Update README.md with instructions on how to customize application properties
 
 ## Phase 6: Polish & Cross-Cutting Concerns
 
