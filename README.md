@@ -1,6 +1,6 @@
 # Spring Boot Hello World
 
-This project is a simple Spring Boot application that demonstrates the basic setup and functionality of a Spring Boot project.
+This project is a simple Spring Boot application that demonstrates the basic setup and functionality of a Spring Boot project using Java 17 and Spring Boot 2.7.5.
 
 ## Prerequisites
 
@@ -32,7 +32,10 @@ The application will start on `http://localhost:8080`.
 - `src/main/java/com/example/Application.java`: Main application class
 - `src/main/java/com/example/config/AppConfig.java`: Application configuration
 - `src/main/java/com/example/config/AppProperties.java`: Custom properties configuration
+- `src/main/java/com/example/config/OpenApiConfig.java`: OpenAPI configuration
+- `src/main/java/com/example/config/SecurityConfig.java`: Security configuration
 - `src/main/java/com/example/controllers/HelloController.java`: REST controller
+- `src/main/java/com/example/exception/GlobalExceptionHandler.java`: Global exception handler
 - `src/main/resources/application.properties`: Application properties
 - `src/main/resources/logback-spring.xml`: Logging configuration
 - `src/test/resources/application-test.properties`: Test-specific properties
@@ -41,24 +44,33 @@ The application will start on `http://localhost:8080`.
 ## Features
 
 - Spring Boot 2.7.5
+- Java 17
 - Spring Web for RESTful endpoints
 - Spring Actuator for application monitoring
 - Spring Shell for CLI interface
 - Custom application properties
 - Logging with SLF4J and Logback
 - Micrometer for metrics collection
+- OpenAPI 3.0 documentation with Swagger UI
+- Basic security configuration with Spring Security
+- Global exception handling
+- Lazy initialization for optimized startup time
 
 ## REST Endpoints
 
-- Hello World: `GET http://localhost:8080/hello`
-    - Returns: Custom message from application properties
+- Hello World: `GET http://localhost:8080/hello?name=YourName`
+    - Returns: Custom message from application properties with the provided name
 
 To test the endpoint, you can use curl:
 ```
-curl http://localhost:8080/hello
+curl "http://localhost:8080/hello?name=YourName"
 ```
 
 Or simply open the URL in your web browser.
+
+## API Documentation
+
+Swagger UI is available at: `http://localhost:8080/swagger-ui.html`
 
 ## Customizing Application Properties
 
@@ -69,6 +81,10 @@ app.message=Your custom message here
 ```
 
 For testing purposes, you can override this property in the `application-test.properties` file.
+
+## Security
+
+The application uses basic Spring Security configuration. All endpoints are publicly accessible except for actuator endpoints, which require authentication.
 
 ## Testing
 
