@@ -1,6 +1,9 @@
+[![Java CI with Maven](https://github.com/Wayne45/java-cicd-project/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/Wayne45/java-cicd-project/actions/workflows/maven.yml)
+
 # Spring Boot Hello World
 
-This project is a simple Spring Boot application that demonstrates the basic setup and functionality of a Spring Boot project using Java 17 and Spring Boot 2.7.5.
+This project is a simple Spring Boot application that demonstrates the basic setup and functionality of a Spring Boot
+project using Java 17 and Spring Boot 2.7.5.
 
 ## Prerequisites
 
@@ -62,6 +65,7 @@ The application will start on `http://localhost:8080`.
     - Returns: Custom message from application properties with the provided name
 
 To test the endpoint, you can use curl:
+
 ```
 curl "http://localhost:8080/hello?name=YourName"
 ```
@@ -74,7 +78,8 @@ Swagger UI is available at: `http://localhost:8080/swagger-ui.html`
 
 ## Customizing Application Properties
 
-The application uses a custom property `app.message` to configure the message returned by the `/hello` endpoint. You can customize this message by modifying the `application.properties` file:
+The application uses a custom property `app.message` to configure the message returned by the `/hello` endpoint. You can
+customize this message by modifying the `application.properties` file:
 
 ```properties
 app.message=Your custom message here
@@ -84,11 +89,13 @@ For testing purposes, you can override this property in the `application-test.pr
 
 ## Security
 
-The application uses basic Spring Security configuration. All endpoints are publicly accessible except for actuator endpoints, which require authentication.
+The application uses basic Spring Security configuration. All endpoints are publicly accessible except for actuator
+endpoints, which require authentication.
 
 ## Testing
 
 To run the tests, execute:
+
 ```
 mvn test
 ```
@@ -98,6 +105,7 @@ The project includes both unit tests and integration tests for the Hello World e
 ## Using Spring Shell
 
 After starting the application, you can use the Spring Shell CLI. For example:
+
 ```
 shell:>hello YourName
 ```
