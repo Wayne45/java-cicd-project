@@ -14,8 +14,8 @@ project using Java 17 and Spring Boot 2.7.5.
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/spring-boot-hello-world.git
-   cd spring-boot-hello-world
+   git clone https://github.com/Wayne45/java-cicd-project.git
+   cd java-cicd-project
    ```
 
 2. Build the project:
