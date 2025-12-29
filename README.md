@@ -14,7 +14,7 @@ project using Java 17 and Spring Boot 2.7.5.
 
 1. Clone the repository:
    ```
-   git clone https://github.com/Wayne45/java-cicd-project.git
+   git clone https://github.com/wayne45/java-cicd-project.git
    cd java-cicd-project
    ```
 
